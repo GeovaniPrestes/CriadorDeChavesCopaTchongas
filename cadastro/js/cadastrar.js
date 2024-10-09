@@ -38,13 +38,13 @@ function GerarSelects() {
       select.appendChild(option)
     }
 
-    var img = document.createElement('img');
-    img.setAttribute('class', 'imagemPrevia');
-    img.setAttribute('id', 'personagem' + i + '-img');
+    var img = document.createElement('img')
+    img.setAttribute('class', 'imagemPrevia')
+    img.setAttribute('id', 'personagem' + i + '-img')
     var titulo = document.createElement('label')
     titulo.innerHTML = 'Personagem ' + i + ': '
     document.getElementById('personagens').appendChild(titulo)
-    document.getElementById('personagens').appendChild(select);
+    document.getElementById('personagens').appendChild(select)
     document.getElementById('personagens').appendChild(img)
   }
 }
@@ -58,3 +58,60 @@ function ModificarPersonagemSelecionado(sel) {
 }
 
 GerarSelects()
+
+document
+  .getElementById('formularioCadastro')
+  .addEventListener('submit', function (evento) {
+    evento.preventDefault()
+    if (!ValidarCampos()) return
+  })
+
+function ValidarCampos() {
+  var nome = document.getElementById('nome').value
+
+  var imagem = document.getElementById('imagem')
+
+  if (nome.length <= 0) {
+    alert('Informe o nome do participante')
+    return false
+  }
+
+  if (ValidarPersonagensSelecionados()) return false
+
+  return true
+}
+
+function ValidarPersonagensSelecionados() {
+  var personagem1 = document.getElementById('personagem1').options[
+    document.getElementById('personagem1').selectedIndex
+  ].value
+  var personagem2 = document.getElementById('personagem2').options[
+    document.getElementById('personagem2').selectedIndex
+  ].value
+  var personagem3 = document.getElementById('personagem3').options[
+    document.getElementById('personagem3').selectedIndex
+  ].value
+
+  console.log(personagem1)
+  console.log(personagem2)
+  console.log(personagem3)
+
+  if (
+    personagem1.length <= 0 ||
+    personagem2.length <= 0 ||
+    personagem3.length <= 0
+  ) {
+    alert('Você ainda não selecionou todos os personagens.')
+    return true
+  }
+
+  if (
+    personagem1 != personagem2 &&
+    personagem2 != personagem3 &&
+    personagem1 != personagem3
+  )
+    return false
+
+  alert('Favor selecionar 3 personagens diferentes.')
+  return true
+}
