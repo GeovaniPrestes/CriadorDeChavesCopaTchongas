@@ -1,0 +1,7 @@
+.imagemPrevia{
+    background-color: #333;
+    height:200px;
+    width: 200px;
+    object-fit: contain;
+    image-rendering: pixelated;
+}
