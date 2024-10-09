@@ -4,7 +4,6 @@ const personagem = [
   "Chun-Li",
   "Dudley",
   "Elena",
-  "Gill",
   "Hugo Andore",
   "Ibuki",
   "Ken Masters",
