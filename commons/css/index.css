@@ -1,0 +1,36 @@
+* {
+  background-color: #333;
+  color: rgb(0, 136, 255);
+  font-family: "Square";
+}
+
+header {
+  background-image: url("../img/copatchongas.png");
+  background-repeat: no-repeat;
+  height: 60vh;
+}
+
+@font-face {
+  font-family: "monofonto";
+  src: url("../fonts/monofonto\ rg.otf");
+}
+@font-face {
+  font-family: "platinumSign";
+  src: url("../fonts/Platinum\ Sign.ttf");
+}
+@font-face {
+  font-family: "platinumSignOver";
+  src: url("../fonts/Platinum\ Sign\ Over.ttf");
+}
+@font-face {
+  font-family: "platinumSignUnder";
+  src: url("../fonts/Platinum\ Sign\ Under.ttf");
+}
+@font-face {
+  font-family: "Square";
+  src: url("../fonts/Square.ttf");
+}
+@font-face {
+  font-family: "Squareo";
+  src: url("../fonts/Squareo.ttf");
+}

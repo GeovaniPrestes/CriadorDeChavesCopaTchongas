@@ -55,7 +55,7 @@ function ModificarPersonagemSelecionado(sel) {
   var id = sel.getAttribute("id");
   document
     .getElementById(id + "-img")
-    .setAttribute("src", "../img/" + personagemSelecionado + ".webp");
+    .setAttribute("src", "../commons/img/" + personagemSelecionado + ".webp");
 }
 
 GerarSelects();

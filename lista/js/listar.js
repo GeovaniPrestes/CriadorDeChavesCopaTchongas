@@ -3,6 +3,7 @@ var participantes = JSON.parse(localStorage.getItem("participantes")) || [];
 function CriarListaDeParticipantes() {
   var tabela = document.getElementById("tabelaParticipantes");
   var i = 0;
+  tabela.innerHTML = "";
 
   GerarCabecalho();
 
@@ -29,17 +30,20 @@ function CriarListaDeParticipantes() {
 
       var colunaPersonagem1 = document.createElement("td");
       var imagemPersonagem1 = document.createElement("img");
-      imagemPersonagem1.src = "../img/" + participante.personagem1 + ".webp";
+      imagemPersonagem1.src =
+        "../commons/img/" + participante.personagem1 + ".webp";
       colunaPersonagem1.setAttribute("class", "colunaDeImagem");
 
       var colunaPersonagem2 = document.createElement("td");
       var imagemPersonagem2 = document.createElement("img");
-      imagemPersonagem2.src = "../img/" + participante.personagem2 + ".webp";
+      imagemPersonagem2.src =
+        "../commons/img/" + participante.personagem2 + ".webp";
       colunaPersonagem2.setAttribute("class", "colunaDeImagem");
 
       var colunaPersonagem3 = document.createElement("td");
       var imagemPersonagem3 = document.createElement("img");
-      imagemPersonagem3.src = "../img/" + participante.personagem3 + ".webp";
+      imagemPersonagem3.src =
+        "../commons/img/" + participante.personagem3 + ".webp";
       colunaPersonagem3.setAttribute("class", "colunaDeImagem");
 
       colunaPersonagem1.appendChild(imagemPersonagem1);
@@ -51,7 +55,7 @@ function CriarListaDeParticipantes() {
       linkParaDeletar.innerHTML = "Deletar";
       var colunaDeletar = document.createElement("td");
       colunaDeletar.appendChild(linkParaDeletar);
-      
+
       linha.appendChild(colunaImagem);
       linha.appendChild(colunaNome);
       linha.appendChild(colunaPersonagem1);
@@ -69,8 +73,6 @@ CriarListaDeParticipantes();
 
 function DeletarLinha(i) {
   participantes.splice(i, 1);
-  var tabela = document.getElementById("tabelaParticipantes");
-  tabela.innerHTML = "";
   CriarListaDeParticipantes();
   localStorage.setItem("participantes", JSON.stringify(participantes));
 }
