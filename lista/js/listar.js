@@ -31,19 +31,19 @@ function CriarListaDeParticipantes() {
       var colunaPersonagem1 = document.createElement("td");
       var imagemPersonagem1 = document.createElement("img");
       imagemPersonagem1.src =
-        "../commons/img/" + participante.personagem1 + ".webp";
+        "../commons/img/" + participante.personagens[0] + ".webp";
       colunaPersonagem1.setAttribute("class", "colunaDeImagem");
 
       var colunaPersonagem2 = document.createElement("td");
       var imagemPersonagem2 = document.createElement("img");
       imagemPersonagem2.src =
-        "../commons/img/" + participante.personagem2 + ".webp";
+        "../commons/img/" + participante.personagens[1] + ".webp";
       colunaPersonagem2.setAttribute("class", "colunaDeImagem");
 
       var colunaPersonagem3 = document.createElement("td");
       var imagemPersonagem3 = document.createElement("img");
       imagemPersonagem3.src =
-        "../commons/img/" + participante.personagem3 + ".webp";
+        "../commons/img/" + participante.personagens[2] + ".webp";
       colunaPersonagem3.setAttribute("class", "colunaDeImagem");
 
       colunaPersonagem1.appendChild(imagemPersonagem1);

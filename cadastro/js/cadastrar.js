@@ -131,12 +131,9 @@ function CadastrarParticipante() {
     var p1 = RetornarPersonagem(1);
     var p2 = RetornarPersonagem(2);
     var p3 = RetornarPersonagem(3);
-    console.log(p1);
     participantes.push({
       nome: document.getElementById("nome").value,
-      personagem1: p1,
-      personagem2: p2,
-      personagem3: p3,
+      personagens: [p1, p2, p3],
       imagem: reader.result,
     });
     localStorage.setItem("participantes", JSON.stringify(participantes));
