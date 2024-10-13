@@ -123,6 +123,24 @@ function ValidarPersonagensSelecionados() {
   return true;
 }
 
+function previewFile() {
+  var file = document.querySelector("input[type=file]").files[0];
+  var reader = new FileReader();
+  var preview = document.getElementById("imageParticipante");
+
+  reader.onloadend = function () {
+    preview.src = reader.result;
+    console.log("cabeça da o popote");
+  };
+
+  if (file) {
+    preview.src = file;
+    reader.readAsDataURL(file);
+  } else {
+    preview.src = "";
+  }
+}
+
 function CadastrarParticipante() {
   var file = document.querySelector("input[type=file]").files[0];
   var reader = new FileReader();
@@ -135,6 +153,7 @@ function CadastrarParticipante() {
       nome: document.getElementById("nome").value,
       personagens: [p1, p2, p3],
       imagem: reader.result,
+      vazio: false,
     });
     localStorage.setItem("participantes", JSON.stringify(participantes));
     window.location.href = "../lista/listar.html";

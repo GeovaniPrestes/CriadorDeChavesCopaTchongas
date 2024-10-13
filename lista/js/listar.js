@@ -100,3 +100,7 @@ function GerarCabecalho() {
   tr.appendChild(thOpcoes);
   tabela.appendChild(tr);
 }
+
+function NovaLuta(){
+    
+}

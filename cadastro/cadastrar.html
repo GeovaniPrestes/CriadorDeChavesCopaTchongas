@@ -17,10 +17,10 @@
         <a href="../index.html">Inicio</a>
       </li>
       <li>
-        <a href="../cadastro/cadastrar.html">Cadastrar competidor</a>
+        <a href="../cadastro/cadastrar.html" class="ativo">Cadastrar competidor</a>
       </li>
       <li>
-        <a href="../lista/listar.html" class="ativo">Ver competidores</a>
+        <a href="../lista/listar.html">Ver competidores</a>
       </li>
       <li>
         <a href="../chaves/chaves.html">Iniciar o caos</a>
@@ -36,10 +36,11 @@
     <div id="personagens"></div>
     <div>
       <label for="Participante">Imagem do participante:</label>
-      <input type="file" accept="image/*" id="imagem" />
-      <img src="" alt="" />
+      <input type="file" accept="image/*" id="imagem" onchange="previewFile()" />
+      <br>
+      <img id="imageParticipante" class="imagemPrevia" src="" alt="" />
     </div>
-    <input type="submit" onchange="previewFile()" value="Salvar" />
+    <input type="submit" value="Salvar" />
   </form>
 
   <script src="js/cadastrar.js"></script>

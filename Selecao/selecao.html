@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="css/selecao.css" />
+    <link rel="stylesheet" href="../commons/css/navbar.css" />
+    <link rel="stylesheet" href="../commons/css/fonts.css" />
+</head>
+
+<body>
+    <nav>
+        <ul>
+            <li>
+                <a href="../index.html">Inicio</a>
+            </li>
+            <li>
+                <a href="../cadastro/cadastrar.html">Cadastrar competidor</a>
+            </li>
+            <li>
+                <a href="../lista/listar.html">Ver competidores</a>
+            </li>
+            <li>
+                <a href="#" class="ativo">Iniciar o caos</a>
+            </li>
+        </ul>
+    </nav>
+
+    <section id="participantes">
+        <div id="monkey1">
+            <select name="" id="select1"></select>
+            <p id="nomeParticipante1">monkey 1</p>
+            <img src="../commons/img/vash.webp" id="participante1" class="imagemPrevia" alt="" />
+        </div>
+        <div id="monkey2">
+            <select name="" id="select2"></select>
+            <p id="nomeParticipante2">monkey 2</p>
+            <img src="../commons/img/vash.webp" id="participante2" class="imagemPrevia" alt="" />
+        </div>
+    </section>
+    <section id="oponentes">
+
+        <div class="caosPrimordial">
+            <img src=" ../commons/img/vs.png" alt="">
+        </div>
+        <div id="div1">
+            <p id="macaco1"></p>
+            <p id="boneco1"></p>
+            <img src="" id="imgBoneco1" class="imagemBoneco" alt="">
+        </div>
+        <div id="div2">
+            <p id="macaco2"></p>
+            <p id="boneco2"></p>
+            <img src="" id="imgBoneco2" class="imagemBoneco" alt="">
+        </div>
+    </section>
+
+    <div class="divCaos">
+        <div class="Caos" onclick="GerarCombate()">Iniciar a luta</div>
+    </div>
+    <div class="divCaos2">
+        <div class="Caos2" onclick="NovaLuta()">Nova luta</div>
+    </div>
+    <script src="js/selecao.js"></script>
+</body>
+
+</html>
